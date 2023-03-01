@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro Usuarios</title>
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-3 bg1">
+          <h3><b>Ingrese datos</b></h3>
+          <form action="" id="form" method="get">
+            <!--<input type="number" name="code" id="code" placeholder="Código" /> -->
+            <input
+              type="text"
+              name="name"
+              id="firstName"
+              placeholder="Nombre"
+            />
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Apellido"
+            />
+            <input type="number" name="idUser" id="idUser" placeholder="ID" />
+            <input type="number" name="edad" id="edad" placeholder="Edad" />
+            <br />
+            <input
+              class="button btn btn-outline-primary"
+              type="submit"
+              name="submir"
+              id="submitUser"
+              value="Subir usuario"
+              onclick="uploadUser()"
+            />
+            <br />
+          </form>
+
+          <button
+            class="button btn btn-outline-primary button-form"
+            onclick="getUserFb()"
+          >
+            Traer Usuario
+          </button>
+          <br />
+          <button
+            class="button btn btn-outline-primary button-form"
+            onclick="deleteEntries()"
+          >
+            Eliminar entradas
+          </button>
+          <!--<button type="button" class="button btn" data-bs-toggle="modal" data-bs-target="#modalDeleteUser"></button>-->
+        </div>
+        <div class="col bg2">
+          <table>
+            <thead class="linea">
+              <tr class="row">
+                <th class="col">Código</th>
+                <th class="col">Nombre</th>
+                <th class="col">Apellido</th>
+                <th class="col">Edad</th>
+                <th class="col"></th>
+                <th class="col"></th>
+              </tr>
+            </thead>
+            <tbody id="agregar"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalDeleteUser">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Borrar Usuario</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            ¿Estás seguro de eliminar este usuario?
+            <form action="" method="get" id="deleteUser">
+              <input
+                type="number"
+                name="idDeleteUser"
+                id="idDeleteUser"
+                placeholder="Confirmar ID"
+              />
+              <br />
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button
+                type="submit"
+                class="btn btn-success"
+                onclick="deleteUserFinal()"
+                value="Aceptar"
+              >
+                Aceptar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    
+
+    <script src="index.js" type="module"></script>
+    <script src="firebase.js" type="module"></script>
+  </body>
+</html>

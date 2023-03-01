@@ -1,0 +1,63 @@
+/*borrar después */
+
+p#exmaple{
+  background-color: chartreuse;
+  border-radius: 50px;
+  display: grid;
+}
+
+
+
+.button {
+  color: black;
+  
+  /*border-radius: 15px black;*/
+}
+
+.button-table {
+  color: black;
+  margin-bottom: 20px;
+  
+  /*border-radius: 15px black;*/
+}
+
+
+
+thead {
+  display: block;
+  background-color: #d5ffb6;
+}
+
+tbody {
+  display: block;
+}
+
+th {
+    margin: 0 auto;
+}
+
+table {
+  display: block;
+}
+
+
+::placeholder{
+  color: blue;
+}
+
+input{
+  margin-top: 15px;
+}
+
+.button-form{
+  margin-top: 15px;
+}
+
+
+/*.linea {
+    border-bottom: 1px solid black;
+    height: 2px;
+    max-width: 200px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+  }*/
